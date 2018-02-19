@@ -1,0 +1,138 @@
+// External styling from: https://codepen.io/manikoth/pen/NNNBYe.css
+
+/* Doodle Stage */
+#stage {
+  // background: #ccc;
+  height: 300px;
+  width: 600px;
+}
+
+img[alt="backLogo"] {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+img[alt="coz"] {
+  display: block;
+  width: 20%;
+  margin-left: 30%;
+  margin-top: -38%;
+}
+
+img[alt="coffee"] {
+  display: block;
+  width: 33%;
+  margin-left: 36%;
+}
+
+img[alt="y"] {
+  display: block;
+  width: 10%;
+  margin-top: -29%;
+  margin-left: 47%;
+}
+
+/* Animation */
+img[alt="backLogo"] {
+  animation: slideIn .8s;
+}
+
+img[alt="coz"] {
+  animation: hidden 2s, fadeIn 2s .8s;
+}
+
+img[alt="coffee"] {
+  animation: hidden 2s, fadeIn 2s .8s;
+}
+
+img[alt="y"] {
+  animation: 
+    hidden 2s, 
+    fadeInY 5s .8s infinite, 
+    stretchX 5s .8s infinite, 
+    // moveY 5s .8s infinite;
+}
+
+/* Keyframes */
+@keyframes slideIn {
+  
+  0% {
+    transform: translateY(-400px);
+    animation-timing-function: ease-out;
+  }
+  
+  60% {
+    transform: translateY(50px);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+  
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+  }  
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes hidden {
+  from {opacity: 0;}
+  to {opacity: 0;}
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-10deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes fadeInY {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes stretchX {
+  0% {
+    transform: scaleX(1);
+  }
+  100%{
+    transform: scaleX(1.5);
+  }
+}
+
+@keyframes moveY {
+    0% {
+    transform: translateY(0px);
+  }
+  
+  100% {
+    transform: translateY(-20px);
+  }
+}
